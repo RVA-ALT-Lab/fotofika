@@ -542,3 +542,10 @@ function my_textarea_callback($args) { // Textarea Callback
 }
 
 
+//TITLE CHOPPER
+function foto_fika_title_chopper(){
+  $title = get_bloginfo('name');
+  $chop = explode(" ",$title);
+  return $chop;
+
+}
