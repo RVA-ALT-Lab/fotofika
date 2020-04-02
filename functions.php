@@ -508,3 +508,39 @@ acf_add_local_field_group(array (
 
 endif;
 
+
+//general settings could add in function.php or your plugin file
+add_action('admin_init', 'foto_fika_general_section');
+
+function foto_fika_general_section() {
+add_settings_section(
+'foto_fika_settings_section', // Section ID
+'Foto Fika', // Section Title
+'foto_fika_section_options_callback', // Callback function
+'general' // Show up on the General Settings Page
+);
+
+
+add_settings_field( 'foto_fika_year', 'Year', 'my_textbox_callback', 'general', 'foto_fika_settings_section', array('foto_fika_year' ) );
+
+
+register_setting('general','foto_fika_year', 'esc_attr');
+}
+
+function foto_fika_section_options_callback() { // Section Callback
+echo '<p></p>';
+}
+
+function my_textbox_callback($args) { // Textbox Callback
+$option = get_option($args[0]);
+echo '<input type="text" id="'. $args[0] .'" name="'. $args[0] .'" value="' .      $option . '" />';
+}
+
+function my_textarea_callback($args) { // Textarea Callback
+$option = get_option($args[0]);
+echo '<textarea id="'. $args[0] .'" name="'. $args[0] .'">' . $option . '</textarea>';
+}
+
+//Get custom field value, anywhere in frontend code.
+
+get_option('fbook');
