@@ -1,0 +1,744 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+//************************NAVBAR TWEEKS************************
+//aligns menu items to the right
+#navbarNavDropdown {
+  justify-content: flex-end;
+}
+
+//gets rid of round edges on child menu elements
+.dropdown-menu {
+	border-radius: 0;
+}
+
+.navbar-brand {
+  font-family: 'PT Mono', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+   position: relative;
+    margin: 20px;
+}
+
+.navbar-brand:before {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    border-top: 4px solid $red;
+    border-left: 4px solid $red;
+}
+
+.inner-box:after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+    border-bottom: 4px solid $red;
+    border-right: 4px solid $red;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: $black;
+  color: $white;
+}
+
+
+//force underline on sub-menu hover
+.dropdown-item:focus, .dropdown-item:hover {
+	text-decoration: underline;
+}
+
+//prevent default fade to non-accessible on pages that are not the active page
+.navbar-dark .navbar-nav .nav-link {
+  color: $white;
+  font-family: 'PT Mono', mono;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+#the-menu {
+	background-color: transparent !important;
+  padding: 0;
+}
+
+.navbar .container {
+  background-color: $white;
+  //box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 4px;
+  //border-bottom: 1px solid #e2e2e2;
+}
+
+#main-menu li {
+  border-bottom: 2px solid $light-gray;
+  border-top: 2px solid $white;
+  height: 100%;
+  margin: 0 .5em;
+}
+
+#main-menu li a{
+   color: $black;
+}
+
+#main-menu li a:hover {
+  text-decoration: none;
+}
+
+#main-menu .active {
+	color: $black;
+  border-top: 2px solid $red;
+  //border-bottom: 2px solid $red;
+  height: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.menu-icon {
+  display: inline-block;
+  font-size: 3em;
+}
+
+.menu-title{
+  display: inline-block; 
+  color: $black;
+}
+
+.menu-title-one, .menu-title-two {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.1em;
+  color: $black;  
+}
+
+
+.menu-title-three {
+  display: inline-block;
+  font-size: 3.4em;
+  line-height: 1em;
+  color: $black;
+}
+
+.description {
+  line-height: 1em;
+  font-size: .7em;
+  margin-bottom: 10px;
+  color: $black;
+  //border-top: 2px solid $red;
+  padding-top: 5px;
+}
+
+
+//************************BASIC CONTENT CHOICES************************
+article a {
+	text-decoration: underline;
+}
+
+body, p {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Oswald', sans-serif;
+}
+
+
+#secondary img, article img, figure, img, img.wp-post-image {
+	margin-bottom: 1em;
+}
+
+p {
+	background-color: $white;
+	padding: 1em .4em;
+}
+
+.table {
+	background-color: $white;
+}
+
+.jumbotron {
+	border-radius: 0;
+}
+
+.custom-header-img {
+	height: 40vw;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.entry-title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3em;
+}
+
+#full-width-page-wrapper, p{
+    background-color: #fbfafa;
+}
+
+.btn-photo{
+    padding: 15px 0;
+    display: block;
+    background: #bd091a;
+    color: #fff;
+    font-size: 1.2em;
+    width: 320px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    margin: 15px 0;
+    width: 350px;
+    margin: 30px auto;
+    cursor: pointer;
+  }
+
+.btn-photo:hover {
+  background-color: $dark-gray;
+}
+
+  #closer {
+    text-align: right;
+    padding: 10px;
+    font-weight: 100;
+}
+
+.submitted-work {
+  margin-top: 60px;
+}
+
+
+//challenges
+//tutorials and artists
+#tutorials {
+  margin-top: 50px;
+  display: block;
+}
+
+.tutorial {
+  padding-bottom: 10px;
+  border-bottom: .1rem solid #e0e0e0;    
+}
+
+.tutorial-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid $red;
+  margin-right: 20px;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.tutorial-title {
+    letter-spacing: .01785714em;
+    font-family: 'PT Mono',sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #3c4043;
+    display: inline-block;
+    padding-left: 50px;
+    margin-top: 20px;
+     -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
+    width: 100%;
+}
+
+.tutorial-title[aria-expanded="true"] {
+  background-color: #fff;
+  margin-left: 50px;
+  padding: 40px 20px;
+}
+
+.tutorial-title h3 {
+  display: inline-block;
+}
+
+.tutorial-title[aria-expanded="true"]::after  {
+  content: ' -';
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.tutorial-title[aria-expanded="false"]::after  {
+  content: ' +';
+  display: inline-block;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.tutorial-words {
+  display: inline-block;
+  max-width: 90%;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.tutorial {
+  transition: all .5s;
+}
+
+.tutorial p{
+  background-color: #fff;
+  margin-left: 50px;
+  padding: 0 40px 50px 70px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.the-artist {
+    background-color: #fff;
+    padding: 40px 20px;
+    height: 100%;
+}
+
+.artist p {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+.artist-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+  transition: box-shadow 0.2s linear;
+}
+
+.artist-img img:hover {
+  box-shadow: 0px 0px 0px 3px $red;
+}
+
+
+#challenges {
+  margin-top: 70px;
+}
+
+.main-hashtag {
+    display: block;
+    font-size: 3em;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.artist {
+  word-wrap: break-word;
+  padding: 30px;
+}
+
+
+.challenge-sub span {
+  display: inline-block;
+  border-left: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  width: 25%;
+  padding: 5px;
+}
+
+.victory::after {
+  content: 'URL looks good! :)';
+  display: block;
+  background-color: green;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.revisit::after {
+  content: 'URL may not be right :(';
+  display: block;
+  background-color: red;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+
+.challenge-hashtag {
+    padding: 1em .4em;
+    text-align: center;
+    border: 1px solid $light-gray;
+}
+
+.main-hashtag {
+      margin-top: 30px;
+}
+
+//FOOTER 
+#wrapper-footer {
+	padding-top: 5em;
+	background-color: $dark-gray;	
+}
+
+.footer-widget{
+	background-color: $dark-gray;
+	padding-top: 3em;
+	color: $white;
+	line-height: 1em;
+}
+
+.widgetizedArea p {
+	background-color: $dark-gray;
+	color: $white;
+	padding: .2em 0;
+	margin: 0;
+}
+
+.widgetizedArea h3 {
+	color: $gold;
+	font-size: 1.2em;
+}
+
+//JUST BLOCKQUOTE
+//from https://codepen.io/iPawan/pen/emrPKP
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: #666;
+
+
+  /*Borders - (Optional)*/
+  border-left-style: solid;
+  border-left-width: 15px;
+  border-right-style: solid;
+  border-right-width: 2px;    
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px; 
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
+  /*Default Color Palette*/
+blockquote.default{ 
+  border-left-color: #656d77;
+  border-right-color: #434a53;  
+}
+
+
+//BOOTSTRAP BREAKOUT
+
+.break-out{
+  width: 100vw;
+  position: relative;
+  left: calc(-1 * (100vw - 100%) / 2);
+  color: rgba(0,0,0,.6);
+  display: block;
+}
+
+.flexy {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: $red;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+//word bank 
+
+button.dictionary {
+    /* Tooltip parent must have these base styles */
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Tooltip shared base styles */
+.tooltip {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    padding: 0;
+    cursor: default;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: normal;
+    text-align: center;
+    border-width: 0;
+    border-style: solid;
+    border-color: #6d6e71;
+    border-top-color: #373739;
+    background-color: #373739;
+    opacity: 0;
+    transition: opacity .3s ease-in .3s;
+}
+
+/* Tooltip visibility class toggled by jQuery */
+.tooltip.isVisible {
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-width: 1px;
+    opacity: 1;
+}
+
+/* Tooltip positioning */
+/** Common styles: Horizontally Centered **/
+.tooltip, /*** Default is equivalent to .tip-bottom ***/
+.tooltip.tip-bottom,
+.tooltip.tip-top {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+}
+/** Common styles: Bottom positions **/
+.tooltip, /*** Default is equivalent to .tip-bottom ***/
+.tooltip.tip-bottom,
+.tooltip.tip-bottom-left,
+.tooltip.tip-bottom-right {
+    top: 110%;
+    top: calc(100% + 5px);
+}
+/** Common styles: Top positions **/
+.tooltip.tip-top,
+.tooltip.tip-top-left,
+.tooltip.tip-top-right {
+    top: auto;
+    bottom: 110%;
+    bottom: calc(100% + 5px);
+}
+/** Common styles: Corner positions **/
+.tooltip.tip-bottom-left,
+.tooltip.tip-bottom-right,
+.tooltip.tip-top-left,
+.tooltip.tip-top-right {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
+/** Common styles: Left corner positions **/
+.tooltip.tip-bottom-left,
+.tooltip.tip-top-left {
+    right: 50%;
+    left: auto;
+    margin-right: -25px;
+}
+/** Common styles: Right corner positions **/
+.tooltip.tip-bottom-right,
+.tooltip.tip-top-right {
+    margin-left: -25px;
+}
+/** Common styles: Vertically Centered **/
+.tooltip.tip-left,
+.tooltip.tip-right {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+}
+/** Left position only **/
+.tooltip.tip-left {
+    right: 110%;
+    right: calc(100% + 5px);
+    left: auto;
+}
+/** Right position only **/
+.tooltip.tip-right {
+    left: 110%;
+    left: calc(100% + 5px);
+}
+
+/* Tooltip arrow shared base styles */
+.tooltip:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    pointer-events: none;
+}
+/** Common styles: Horizontally Centered, Up/Down arrows **/
+.tooltip:after, /*** Default is equivalent to .tip-bottom:after; ***/
+.tooltip.tip-bottom:after,
+.tooltip.tip-top:after {
+    left: 50%;
+    margin-left: -10px;
+}
+/** Common styles: Up arrow **/
+.tooltip:after, /*** Default is equivalent to .tip-bottom:after; ***/
+.tooltip.tip-bottom:after,
+.tooltip.tip-bottom-left:after,
+.tooltip.tip-bottom-right:after {
+    top: -20px;
+    border-color: transparent transparent #373739 transparent;
+}
+/** Common styles: Down arrow **/
+.tooltip.tip-top:after,
+.tooltip.tip-top-left:after,
+.tooltip.tip-top-right:after{
+    top: auto;
+    bottom: -20px;
+    border-color: #373739 transparent transparent transparent;
+}
+/** Common styles: Left-/Right-aligned, Up/Down arrows **/
+.tooltip.tip-bottom-left:after,
+.tooltip.tip-bottom-right:after,
+.tooltip.tip-top-left:after,
+.tooltip.tip-top-right:after {
+    margin-left: 0;
+}
+/** Common styles: Right-aligned, Up/Down arrows **/
+.tooltip.tip-bottom-left:after,
+.tooltip.tip-top-left:after {
+    right: 15px;
+    left: auto;
+}
+/** Common styles: Left-aligned, Up/Down arrows **/
+.tooltip.tip-bottom-right:after,
+.tooltip.tip-top-right:after {
+    left: 15px;
+}
+/** Common styles: Vertically Centered, Left/Right arrows **/
+.tooltip.tip-left:after,
+.tooltip.tip-right:after {
+    top: 50%;
+    margin-top: -10px;
+    margin-left: auto;
+}
+/** Right arrow **/
+.tooltip.tip-left:after {
+    right: -20px;
+    left: auto;
+    border-color: transparent transparent transparent #373739;
+}
+/** Left arrow **/
+.tooltip.tip-right:after {
+    left: -20px;
+    border-color: transparent #373739 transparent transparent;
+}
+
+.alt-dictionary-title {
+  display: block;  
+  margin-top: 20px;
+}
+
+.alt-dictionary {
+  border: 1px solid #efefef;
+  padding: .5em;
+}
+
+.alt-dictionary button {
+  padding: .3em .75em;
+  border: 1px solid #000;
+  margin: .3em .5em;
+  text-transform: none;
+}
+
+.tooltip.tip-top {
+    width: 420px;
+}
+
+.error {
+  border-bottom: 3px solid $red;
+}
+
+.error::after {
+  content: 'URL is not working';
+  display: block;
+  font-size: 2em;
+}
+
+//MOBILE LAND
+@media only screen and (max-width: 600px) {
+
+}
