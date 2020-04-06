@@ -16,9 +16,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="wrapper-footer">
 
 	<footer class="<?php echo esc_attr( $container ); ?>">
-
+		<div class="row" id="insta-pot"></div>
 		<div class="row" id="footer">
-
+		
 
 							<div class="footer-widget col-md-3">
 								<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer - far left") ) : ?><?php endif;?>

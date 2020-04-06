@@ -318,7 +318,7 @@ function get_the_artists(){
   if( have_rows('artists') ):
 
     // loop through the rows of data
-    echo '<h2 id="artists" class="magic-topics">Artists</h2>';
+    echo '<h2 id="artists" class="magic-topics">'.get_field('artist_label').'</h2>';
     echo '<div class="row">';
       while ( have_rows('artists') ) : the_row();
 
@@ -345,7 +345,7 @@ function get_the_tutorials(){
   if( have_rows('tutorials') ):
 
     // loop through the rows of data
-    echo '<h2 id="tutorials" class="magic-topics">Tutorials & Resources</h2>';
+    echo '<h2 id="tutorials" class="magic-topics">'.get_field('tutorial_label').'</h2>';
     echo '<div class="row tutorial-box">';
       while ( have_rows('tutorials') ) : the_row();
           $clean_title = sanitize_title_with_dashes(get_sub_field('tutorial_title'));
@@ -547,5 +547,4 @@ function foto_fika_title_chopper(){
   $title = get_bloginfo('name');
   $chop = explode(" ",$title);
   return $chop;
-
 }

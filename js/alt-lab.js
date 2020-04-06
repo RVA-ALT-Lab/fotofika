@@ -29,83 +29,59 @@ for (var i = 0; i < videos.length; i++) {
       wrapper.appendChild(el); // move video into wrapper
 }
 
-//popup album confirmation 
-jQuery(document).bind("gform_confirmation_loaded", function (e, form_id) {
-  console.log('fired');
-  google_album_confirmation();
-});
 
-jQuery( document ).ready(function() {
-    google_album_confirmation();
-});
 
-function google_album_confirmation(){
-  if (document.getElementById('verify-album')){
-    var albumLink = document.getElementById('verify-album');
-    var theUrl = albumLink.getAttribute('href');
-   albumLink.addEventListener("click", function(){gaPopup(theUrl)});
-  }
+
+// function gaPopup(theUrl){
+//   window.open(theUrl,'popup','width=600,height=600');
+//   console.log('santiy?');
+// }
+
+// jQuery('#submissionModal').on('show.bs.modal', function (event) {
+//   var button = jQuery(event.relatedTarget); // Button that triggered the modal
+//   console.log(button.data('tag'));
+//   if(button.data('tag')){
+//     var tag = button.data('tag'); // Extract info from data-* attributes
+//   }
+//   var modal = jQuery(this);
+//   modal.find('#input_1_5').val(tag);
+// })
+
+
+// jQuery('#submissionModal').on('hide.bs.modal', function () {
+//   location.reload(true);
+// });
+
+
+
+
+if (document.getElementById('insta-pot')){
+  const igUrl = 'https://www.instagram.com/explore/tags/fotofika/?__a=1'
+
+  let markup = '';
+  let altText ='';
+
+    fetch(igUrl).then(function(response) {
+        var contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          return response.json().then(function(json) {
+            const igs = json.graphql.hashtag.edge_hashtag_to_media.edges;
+          
+            igs.forEach(function(element){
+              if (element.node.edge_media_to_caption.edges[0]){
+                 altText = element.node.edge_media_to_caption.edges[0].node.text;
+              } else {
+                 altText = 'a picture involving ' + tag 
+              }
+              markup = `<div class="col-md-3"><a href="https://www.instagram.com/p/${element.node.shortcode}"  target="_blank" ><img src="${element.node.thumbnail_src}" alt="${altText}"></a></div>` + markup;                     
+            })
+          })
+        }
+    }).then(function(){
+          console.log(document.getElementById('ig-holder'))
+          document.getElementById('insta-pot').innerHTML = markup;
+    })
+
+
+
 }
-
-
-function gaPopup(theUrl){
-  window.open(theUrl,'popup','width=600,height=600');
-  console.log('santiy?');
-}
-
-jQuery('#submissionModal').on('show.bs.modal', function (event) {
-  var button = jQuery(event.relatedTarget); // Button that triggered the modal
-  console.log(button.data('tag'));
-  if(button.data('tag')){
-    var tag = button.data('tag'); // Extract info from data-* attributes
-  }
-  var modal = jQuery(this);
-  modal.find('#input_1_5').val(tag);
-})
-
-
-jQuery('#submissionModal').on('hide.bs.modal', function () {
-  location.reload(true);
-});
-
-
-//check for 404 on album entry
-
-  window.onload = function() {
-    
-    var album = document.getElementById('input_1_3');
-
-    //if (album){
-             makeButton();
-
-     // album.addEventListener("onEdit", urlExists);
-      album.addEventListener('input',function(e){
-      checkUrl(album.value);
-      },false);
-
-   // }
-  };
-
-  function makeButton (){
-    if (document.getElementById('testing-button') === null){     
-        jQuery("#input_1_3").after('<div id="testing-button"></div>');
-      }
-      
-  }
-
-
-
-
-function checkUrl(url){
-  var goo = url.includes('photos.app.goo.gl',0)
-  var share = url.includes('share',0)
-  var urlDisplay = document.getElementById('testing-button')
-  if (goo === true || share === true ){
-    urlDisplay.classList.add('victory')
-    urlDisplay.classList.remove('revisit')
-  } else {
-    urlDisplay.classList.remove('victory')
-    urlDisplay.classList.add('revisit')
-  }
-}
-   
