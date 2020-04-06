@@ -150,6 +150,35 @@ function bannerMaker(){
     } 
 }
 
+ //ACF JSON SAVER
+  add_filter('acf/settings/save_json', 'fotofika_json_save_point');
+   
+  function fotofika_json_save_point( $path ) {
+      
+      // update path
+      $path = get_stylesheet_directory() . '/acf-json';
+      
+      // return
+      return $path;
+      
+  }
+
+  //ACF JSON LOADER **********this is broken but works by default
+  // add_filter('acf/settings/load_json', 'fotofika_acf_json_load_point');
+
+  // function fotofika_acf_json_load_point( $paths ) {
+      
+  //     // remove original path (optional)
+  //     unset($paths[0]);    
+      
+  //     // append path
+  //     $path = get_stylesheet_directory() . '/acf-json';
+      
+  //     // return
+  //     return $paths;
+      
+  // }
+
 
 
 //get challenge submissions from gravity forms
@@ -373,140 +402,9 @@ function collapse_button($title){
 
 //Vocab
 
-function get_the_vocab_words(){
-    global $post;
-    $html = '';
-    if( have_rows('vocabulary_bank', $post->ID) ):
-        $html = '<h2 class="alt-dictionary-title magic-topics">Terms</h2><div class="row tutorial-box"><div class="alt-dictionary col-md-9">';
-    while ( have_rows('vocabulary_bank') ) : the_row();
-        // Your loop code
-      $html .= '<button type="button" class="dictionary">' . get_sub_field('target_language_word');
-      $html .= '<span class="tooltip tip-top" role="tooltip">' . get_sub_field('english_equivalent') . '</span></button>';
-    endwhile;
-      $html .=  '</div></div>';
-    else :
-        // no rows found
-    endif;
-    return $html;
-}
 
 
 
-//add acf stuff if you have ACF pro running (based on repeater field so you need pro) -- will remove option to edit it though which might be confusing
-if( function_exists('acf_add_local_field_group') ):
-
-acf_add_local_field_group(array (
-    'key' => 'group_5b562549618d1',
-    'title' => 'Vocabulary Builder',
-    'fields' => array (
-        array (
-            'key' => 'field_5b5625749e430',
-            'label' => 'Vocabulary Bank',
-            'name' => 'vocabulary_bank',
-            'type' => 'repeater',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array (
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'collapsed' => '',
-            'min' => 0,
-            'max' => 0,
-            'layout' => 'block',
-            'button_label' => 'Add a new word pair',
-            'sub_fields' => array (
-                array (
-                    'key' => 'field_5b5626ba63e37',
-                    'label' => 'Topic Word',
-                    'name' => 'target_language_word',
-                    'type' => 'text',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array (
-                        'width' => '30',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                ),
-                array (
-                    'key' => 'field_5b5625939e432',
-                    'label' => 'Definition',
-                    'name' => 'english_equivalent',
-                    'type' => 'text',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array (
-                        'width' => '70',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                ),
-            ),
-        ),
-    ),
-    'location' => array (
-        array (
-            array (
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'page',
-            ),
-        ),
-        array (
-            array (
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'part',
-            ),
-        ),
-        array (
-            array (
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'post',
-            ),
-        ),
-        array (
-            array (
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'front-matter',
-            ),
-        ),
-        array (
-            array (
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => 'back-matter',
-            ),
-        ),
-    ),
-    'menu_order' => 1,
-    'position' => 'normal',
-    'style' => 'default',
-    'label_placement' => 'top',
-    'instruction_placement' => 'label',
-    'hide_on_screen' => '',
-    'active' => 1,
-    'description' => '',
-));
-
-endif;
 
 //SETTINGS PAGE ADDITION
 //general settings could add in function.php or your plugin file

@@ -22,8 +22,7 @@
 		<?php get_the_artists();?>
 
 		<?php get_the_tutorials();?>
-		<!--should be repeater field with title, concept, link -->
-		<?php echo get_the_vocab_words();?>
+
 		
 		<h2 id="challenges" class="magic-topics">&nbsp;</h2>
 		<div class="daily assignment row">
@@ -33,7 +32,7 @@
 				<?php		 
 				 	echo challenge_submission_structure($daily_tag);
 				 ?>
-				<?php echo do_shortcode('[elfsight_instagram_feed source="' . acf_fetch_daily_challenge_hashtag_tag() . '" limit="32" widget_title=""]')?>
+				<?php //echo do_shortcode('[elfsight_instagram_feed source="' . acf_fetch_daily_challenge_hashtag_tag() . '" limit="32" widget_title=""]')?>
 				 <?php 
 						get_challenges(get_the_title(), $daily_tag);				
 					?>
@@ -50,7 +49,7 @@
 				//echo challenge_submission_structure($weekly_tag);
 			?>
 
-			<?php echo do_shortcode('[elfsight_instagram_feed source="' . acf_fetch_weekly_challenge_hashtag() . '" limit="32" widget_title=""]')?>				
+			<?php //echo do_shortcode('[elfsight_instagram_feed source="' . acf_fetch_weekly_challenge_hashtag() . '" limit="32" widget_title=""]')?>				
 					 
 				<?php 
 						get_challenges(get_the_title(), $weekly_tag);
