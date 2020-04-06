@@ -158,7 +158,8 @@ h1, h2, h3, h4, h5 {
 
 p {
 	background-color: $white;
-	padding: 1em .4em;
+	padding: .6em .4em;
+  margin-bottom: 0;
 }
 
 .table {
@@ -259,7 +260,7 @@ p {
 .tutorial-title[aria-expanded="true"] {
   background-color: #fff;
   margin-left: 50px;
-  padding: 40px 20px;
+  padding: 40px 20px 30px 20px;
 }
 
 .tutorial-title h3 {
@@ -294,7 +295,7 @@ p {
 .tutorial p{
   background-color: #fff;
   margin-left: 50px;
-  padding: 0 40px 50px 70px;
+  padding: 0 40px 20px 70px;
   width: 100%;
   margin-bottom: 0;
 }
