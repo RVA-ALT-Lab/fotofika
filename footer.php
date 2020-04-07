@@ -17,6 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<footer class="<?php echo esc_attr( $container ); ?>">
 		<div class="row" id="insta-pot"></div>
+		<a class="btn btn-primary" href="https://www.instagram.com/explore/tags/fotofika2020/">See More Fika Fotos</a>
 		<div class="row" id="footer">
 		
 

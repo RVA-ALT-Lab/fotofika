@@ -136,7 +136,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Tutorials",
+            "default_value": "Resources",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -144,7 +144,7 @@
         },
         {
             "key": "field_5c37541f7e2fd",
-            "label": "Tutorials",
+            "label": "Tutorials\/Resources",
             "name": "tutorials",
             "type": "repeater",
             "instructions": "",
@@ -295,5 +295,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586200024
+    "modified": 1586258909
 }

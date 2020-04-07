@@ -56,7 +56,7 @@ for (var i = 0; i < videos.length; i++) {
 
 
 if (document.getElementById('insta-pot')){
-  const igUrl = 'https://www.instagram.com/explore/tags/fotofika/?__a=1'
+  const igUrl = 'https://www.instagram.com/explore/tags/fotofika2020/?__a=1'
 
   let markup = '';
   let altText ='';
@@ -66,14 +66,17 @@ if (document.getElementById('insta-pot')){
         if (contentType && contentType.indexOf("application/json") !== -1) {
           return response.json().then(function(json) {
             const igs = json.graphql.hashtag.edge_hashtag_to_media.edges;
-          
+            var i = 0;
             igs.forEach(function(element){
+             i++;
               if (element.node.edge_media_to_caption.edges[0]){
                  altText = element.node.edge_media_to_caption.edges[0].node.text;
               } else {
-                 altText = 'a picture involving ' + tag 
+                 altText = 'A picture involving ' + tag 
               }
-              markup = `<div class="col-md-3"><a href="https://www.instagram.com/p/${element.node.shortcode}"  target="_blank" ><img src="${element.node.thumbnail_src}" alt="${altText}"></a></div>` + markup;                     
+              if (i < 9){
+                markup = `<div class="col-md-3"><a href="https://www.instagram.com/p/${element.node.shortcode}"  target="_blank" ><img src="${element.node.thumbnail_src}" alt="${altText}"></a></div>` + markup;                     
+              }
             })
           })
         }
