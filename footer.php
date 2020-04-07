@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="wrapper-footer">
 	<!--write post Modal -->
 	<?php if ( is_user_logged_in() ) { ?>
-	<button class="btn alt-button" type="button" data-toggle="modal" data-target="#postModal">Add a post</button>	
+	<button class="btn btn-fika" type="button" data-toggle="modal" data-target="#postModal">Add a post</button>	
 	<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="the-greeting" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php } ?>
 	<footer class="<?php echo esc_attr( $container ); ?>">
 		<div class="row" id="insta-pot"></div>
-		<a class="btn btn-primary" href="https://www.instagram.com/explore/tags/fotofika2020/">See More Fika Fotos</a>
+		<a class="btn btn-fika" href="https://www.instagram.com/explore/tags/fotofika2020/">See More Fika Fotos</a>
 		<div class="row" id="footer">
 		
 

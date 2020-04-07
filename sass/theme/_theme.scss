@@ -387,6 +387,22 @@ p {
       margin-top: 30px;
 }
 
+.btn-fika {
+  width: 300px;
+  display: block;
+  margin: 30px auto;
+  background-color: #fff;
+  color: $primary;
+  transition: all .4s;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.btn-fika:hover{
+  background-color: $primary;
+  color: #fff;
+}
+
 //FOOTER 
 #wrapper-footer {
 	padding-top: 5em;
