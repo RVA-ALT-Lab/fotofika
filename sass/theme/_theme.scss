@@ -757,5 +757,16 @@ button.dictionary {
 
 //MOBILE LAND
 @media only screen and (max-width: 600px) {
+  .tutorial-icon {
+    display: none;
+  }
+  
+  .tutorial-title {
+    padding-left: 15px;
+  }
 
+  .tutorial-title h3{
+    text-overflow: ellipsis;
+    max-width: 80%;
+  }
 }
