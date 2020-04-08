@@ -28,9 +28,9 @@
 		<div class="daily assignment row">
 				<?php 
 					$daily_tag = acf_fetch_daily_challenge_hashtag();
-					echo acf_fetch_daily_challenge_description($daily_tag);?>
+					//echo acf_fetch_daily_challenge_description($daily_tag);?>
 				<?php		 
-				 	echo challenge_submission_structure($daily_tag);
+				 	//echo challenge_submission_structure($daily_tag);
 				 ?>
 				<?php //echo do_shortcode('[elfsight_instagram_feed source="' . acf_fetch_daily_challenge_hashtag_tag() . '" limit="32" widget_title=""]')?>
 				 <?php 
@@ -66,7 +66,9 @@
 
 
 	<footer class="entry-footer">
- 		<?php if(get_field('daily_challenge_hashtag')) { echo '<h2>#<span id="special-tag">' . str_replace('#','',get_field('weekly_challenge_hashtag')) . '</span> Photos</h2>';}?>
+		<div class="weekly-tag">
+ 		<?php if(get_field('weekly_challenge_hashtag')) { echo '<h2>#<span id="special-tag">' . str_replace('#','',get_field('weekly_challenge_hashtag')) . '</span> Photos</h2>';}?>
+ 		</div>
 		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
