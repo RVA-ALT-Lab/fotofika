@@ -56,8 +56,16 @@ for (var i = 0; i < videos.length; i++) {
 
 
 if (document.getElementById('insta-pot')){
-  const igUrl = 'https://www.instagram.com/explore/tags/fotofika2020/?__a=1'
+  var specialTag ='';
+  if (document.getElementById('special-tag'))
+  { 
+   specialTag = document.getElementById('special-tag').innerHTML;
 
+  } else {
+   specialTag = 'fotofika2020'
+  }
+  let igUrl = 'https://www.instagram.com/explore/tags/'+specialTag+'/?__a=1'
+ console.log(igUrl)
   let markup = '';
   let altText ='';
 
