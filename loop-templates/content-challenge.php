@@ -66,7 +66,7 @@
 
 
 	<footer class="entry-footer">
- 		<?php if(get_field('daily_challenge_hashtag')) { echo '<h2><span id="special-tag">' . get_field('daily_challenge_hashtag') . '</span> Photos</h2>';}?>
+ 		<?php if(get_field('daily_challenge_hashtag')) { echo '<h2>#<span id="special-tag">' . str_replace('#','',get_field('weekly_challenge_hashtag')) . '</span> Photos</h2>';}?>
 		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
