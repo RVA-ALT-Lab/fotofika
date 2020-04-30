@@ -512,6 +512,34 @@ blockquote.default{
   justify-content: space-between;
 }
 
+//author post frames
+
+#main .updates  {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+}
+
+#main .ejschneider  {
+  border-image-source: linear-gradient(to left, #44a5ef, #0ef609);
+}
+
+
+#main .rvarts  {
+  border-image-source: linear-gradient(to left, #f90608, #44a5ef);
+}
+
+#main .annemassoni{
+  border-image-source: linear-gradient(to left, #fcec22, #ff0000);
+}
+
+// RGB designations
+// Anne - Red
+// Betsy - Green
+// John - Blue
+
+
+
 
 /* Underline From Center */
 .hvr-underline-from-center {
