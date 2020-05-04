@@ -23,7 +23,8 @@
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-color: $black;
+  background-image: url('../imgs/star.jpg');
+  background-image-size: contain;
   color: $white;
 }
 
@@ -478,9 +479,6 @@ blockquote a{
   color: #c76c0c;
 }
 
-blockquote a:hover{
- color: #666;
-}
 
 blockquote em{
   font-style: italic;
@@ -799,5 +797,12 @@ button.dictionary {
   }
   .menu-star {
     display: none;
+  }
+  .tutorial-title[aria-expanded=true] {
+    margin-left: 0;
+  }
+  .tutorial p {
+    padding:  0 0 20px 0;
+    width: auto;
   }
 }
