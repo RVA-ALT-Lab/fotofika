@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<div class="inner-box">
 									<div class="menu-title">
 										<div class="menu-title-one"><?php echo foto_fika_title_chopper()[0];?></div>
-										<div class="menu-title-two"><?php echo foto_fika_title_chopper()[1];?></div>
+										
 									</div>													
 								<div class="menu-title-three"><?php echo get_option('foto_fika_year')?></div>
 								<div class="description"><?php echo get_bloginfo('description');?></div>

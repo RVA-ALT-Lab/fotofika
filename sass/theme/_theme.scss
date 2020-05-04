@@ -11,35 +11,16 @@
 }
 
 .navbar-brand {
-  font-family: 'PT Mono', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
-   position: relative;
-    margin: 20px;
+  position: relative;
+  margin: 20px;
 }
 
-.navbar-brand:before {
-    display: block;
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: -5px;
-    left: -15px;
-    border-top: 4px solid $red;
-    border-left: 4px solid $red;
-}
-
-.inner-box:after {
-    display: block;
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: 0px;
-    right: -15px;
-    border-bottom: 4px solid $red;
-    border-right: 4px solid $red;
+.menu-title {
+  letter-spacing: .5em;
+  text-align: center;
+  border: 1px solid;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -115,7 +96,8 @@
   margin: 0;
   font-size: 1.3em;
   line-height: 1.1em;
-  color: $black;  
+  color: $black; 
+  font-family: 'Arvo', sans-serif;
 }
 
 

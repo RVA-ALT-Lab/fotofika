@@ -70,12 +70,13 @@ require get_template_directory() . '/inc/woocommerce.php';
  */
 require get_template_directory() . '/inc/editor.php';
 
+//@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto&display=swap');
 
 //ADD FONTS and VCU Brand Bar
 add_action('wp_enqueue_scripts', 'alt_lab_scripts');
 function alt_lab_scripts() {
   $query_args = array(
-    'family' => 'Oswald:400,500,700|Roboto+Regular:100,300',
+    'family' => 'Arvo:wght@400;700|Roboto+Regular:100,300',
     'subset' => 'latin,latin-ext',
   );
   wp_enqueue_style ( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
