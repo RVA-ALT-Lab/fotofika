@@ -18,9 +18,8 @@
 }
 
 .menu-title {
-  letter-spacing: .5em;
   text-align: center;
-  border: 1px solid;
+  font-size: 2em;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -88,22 +87,25 @@
 }
 
 .menu-title{
-  display: inline-block; 
-  color: $black;
-}
-
-.menu-title-one, .menu-title-two {
-  margin: 0;
-  font-size: 1.3em;
+  font-size: 2em;
   line-height: 1.1em;
   color: $black; 
   font-family: 'Arvo', sans-serif;
+  text-align: left;
 }
 
+.menu-title-one, .menu-title-two {
+    display: inline-block;
+}
+
+.menu-star {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
 .menu-title-three {
   display: inline-block;
-  font-size: 3.4em;
   line-height: 1em;
   color: $black;
 }
@@ -125,6 +127,8 @@
 //************************BASIC CONTENT CHOICES************************
 article a {
 	text-decoration: underline;
+  text-decoration-color: #ff0037;
+  color: #000;
 }
 
 body, p {
@@ -134,7 +138,7 @@ body, p {
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
 }
 
 
@@ -169,8 +173,12 @@ p {
     font-size: 3em;
 }
 
-#full-width-page-wrapper, p{
+ p{
     background-color: #fbfafa;
+}
+
+#full-width-page-wrapper {
+  background-color: #7cccfc;
 }
 
 .btn-photo{
@@ -222,10 +230,13 @@ p {
   height: 2rem;
   border-radius: 50%;
   display: inline-block;
-  border: 2px solid $red;
   margin-right: 20px;
   vertical-align: top;
   padding: 10px;
+  background-image: url('../imgs/star.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tutorial-title {
@@ -251,6 +262,10 @@ p {
 
 .tutorial-title h3 {
   display: inline-block;
+}
+
+.tutorial-box {
+  background-color: #fff;
 }
 
 .tutorial-title[aria-expanded="true"]::after  {
@@ -392,11 +407,10 @@ p {
 //FOOTER 
 #wrapper-footer {
 	padding-top: 5em;
-	background-color: $dark-gray;	
+	background-color: #fff;	
 }
 
 .footer-widget{
-	background-color: $dark-gray;
 	padding-top: 3em;
 	color: $white;
 	line-height: 1em;
@@ -782,5 +796,8 @@ button.dictionary {
   .tutorial-title h3{
     text-overflow: ellipsis;
     max-width: 80%;
+  }
+  .menu-star {
+    display: none;
   }
 }

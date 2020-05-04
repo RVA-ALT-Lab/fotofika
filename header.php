@@ -29,24 +29,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="the-menu">
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary" id="the-menu">				
+
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
+		<img class="menu-star fluid" src="<?php bloginfo('template_url'); ?>/imgs/star.jpg">
 
 				
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
 								<!--<div class="menu-icon"><i class="fa fa-camera-retro" aria-hidden="true"></i></div>-->
 								<div class="inner-box">
 									<div class="menu-title">
-										<div class="menu-title-one"><?php echo foto_fika_title_chopper()[0];?></div>
-										
-									</div>													
-								<div class="menu-title-three"><?php echo get_option('foto_fika_year')?></div>
-								<div class="description"><?php echo get_bloginfo('description');?></div>
+										<div class="menu-title-one">
+											<?php echo foto_fika_title_chopper()[0];?>
+										</div>	
+										<div class="menu-title-three">
+											<?php echo get_option('foto_fika_year')?>
+										</div>
+									</div>
+									<div class="description">
+										<?php echo get_bloginfo('description');?>
+									</div>
 								</div>
 							</a>
 
