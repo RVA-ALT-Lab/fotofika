@@ -346,8 +346,8 @@ function get_the_artists(){
   if( have_rows('artists') ):
 
     // loop through the rows of data
-    echo '<h2 id="artists" class="magic-topics">'.get_field('artist_label').'</h2>';
-    echo '<div class="row">';
+    echo '<div class="row artists">';
+    echo '<div class="col-md-12"><h2 id="artists" class="magic-topics">'.get_field('artist_label').'</h2></div>';
       while ( have_rows('artists') ) : the_row();
 
           // display a sub field value

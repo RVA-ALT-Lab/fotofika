@@ -37,7 +37,6 @@
 //prevent default fade to non-accessible on pages that are not the active page
 .navbar-dark .navbar-nav .nav-link {
   color: $white;
-  font-family: 'PT Mono', mono;
   font-weight: 300;
   font-size: 1.2em;
 }
@@ -126,6 +125,11 @@
 
 
 //************************BASIC CONTENT CHOICES************************
+#primary {
+  background-color: #fff;
+  padding: 30px;
+}
+
 article a {
 	text-decoration: underline;
   text-decoration-color: #ff0037;
@@ -139,9 +143,12 @@ body, p {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Roboto Regular', sans-serif;
+  font-family: 'Arvo', sans-serif;
 }
 
+h3 {
+  font-size: 1.55em;
+}
 
 #secondary img, article img, figure, img, img.wp-post-image {
 	margin-bottom: 1em;
@@ -174,11 +181,8 @@ p {
     font-size: 3em;
 }
 
- p{
-    background-color: #fbfafa;
-}
 
-#full-width-page-wrapper {
+#full-width-page-wrapper, #single-wrapper {
   background-color: #7cccfc;
 }
 
@@ -216,9 +220,16 @@ p {
 
 //challenges
 //tutorials and artists
-#tutorials {
+#tutorials, #artists {
   margin-top: 50px;
   display: block;
+}
+
+.row.artists {
+  background-color: #00ff91;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: 50px;
 }
 
 .tutorial {
@@ -804,5 +815,8 @@ button.dictionary {
   .tutorial p {
     padding:  0 0 20px 0;
     width: auto;
+  }
+  .menu-title {
+    font-size: 1.5em;
   }
 }
