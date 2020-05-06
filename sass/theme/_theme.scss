@@ -152,6 +152,13 @@ h3 {
 
 #secondary img, article img, figure, img, img.wp-post-image {
 	margin-bottom: 1em;
+  width: 100%;
+  height: auto;
+}
+
+.cat-links {
+    margin: 40px 5px;
+    display: block;
 }
 
 p {
@@ -225,12 +232,6 @@ p {
   display: block;
 }
 
-.row.artists {
-  background-color: #00ff91;
-  margin-left: -30px;
-  margin-right: -30px;
-  margin-top: 50px;
-}
 
 .tutorial {
   padding-bottom: 10px;
@@ -313,6 +314,40 @@ p {
   margin-bottom: 0;
 }
 
+.artist {
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+.artist:nth-of-type(2n+1){
+  padding: 15px 0px;
+}
+
+.row.artists {
+  background-color: #00ff91;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: 50px;
+}
+
+.artist-img {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.artist-filler {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .the-artist {
     background-color: #fff;
     padding: 40px 20px;
@@ -349,11 +384,6 @@ p {
     font-size: 3em;
     font-weight: 100;
     text-decoration: none;
-}
-
-.artist {
-  word-wrap: break-word;
-  padding: 30px;
 }
 
 
@@ -818,5 +848,8 @@ button.dictionary {
   }
   .menu-title {
     font-size: 1.5em;
+  }
+  .entry-title {
+    font-size: 2em;
   }
 }

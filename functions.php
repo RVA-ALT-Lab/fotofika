@@ -353,7 +353,8 @@ function get_the_artists(){
           // display a sub field value
           echo '<div class="col-md-4 artist"><div class="the-artist">';
           echo '<a href="' . get_sub_field('main_link') . '">';
-          echo '<div class="artist-img"><img src="' . get_sub_field('artist_image') . '" alt="A photo of '. get_sub_field('artist_name') .'."></div></a>';
+          // echo '<div class="artist-img"><img src="' . get_sub_field('artist_image') . '" alt="A photo of '. get_sub_field('artist_name') .'."></div></a>';
+          echo '<div class="artist-img embed-responsive embed-responsive-1by1"><span class="artist-filler" role="img" aria-label="An image representing '.get_sub_field('artist_name').'." style="background-image:url('.get_sub_field('artist_image').')"></span></div></a>';
           echo '<h3>' . get_sub_field('artist_name') . '</h3>';
           echo  get_sub_field('artist_description');
           echo '</div></div>';
